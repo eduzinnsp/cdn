@@ -25,9 +25,7 @@ A CDN é um serviço essencial para fornecer conteúdo estático, como imagens, 
 ```bash
 git clone https://github.com/eduzinnsp/cdn.git
 
-cd cdn-main
-
-npm install
+cd cdn && npm install
 ```
 
 2. Crie um arquivo .env na raiz do projeto e defina as seguintes variáveis:

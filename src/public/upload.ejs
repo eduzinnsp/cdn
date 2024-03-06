@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xlt cdn</title>
+
+    <link rel="icon" href="https://www.rynekzabawek.pl/wp-content/uploads/2015/07/hello_kitty_png__pedio_para_aileen13_by_mielita_cuted5bp57g.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+n7zNVzr0n5IxlYOiRSKBDdK3XWn2rs5xCSm8KT" crossorigin="anonymous">
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inter");
+        body {
+            background-color: #111012;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            position: relative; /* Adicionado */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-label {
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #181719;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 6px;
+            height: 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;    
+            background-color: #4B46AF;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .github-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color:#4B46AF;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: white;">xlt cdn - upload imagens</h1>
+        <form action="/images/upload" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="imagem" class="form-label">Selecione uma imagem</label>
+                <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*, video/*" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <a href="https://github.com/eduzinnsp/cdn" class="github-logo"> 
+            <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="Github" style="width: 50px; height: 50px;" />
+        </a>
+    </div>
+    
+
+    <script>
+        document.querySelector("#imagem").onchange = function() {
+            const fileName = this.files[0]?.name;
+            const label = document.querySelector("label[for=imagem]");
+
+            label.innerText = fileName ?? "Selecione uma imagem";
+        };
+    </script>
+</body>
+</html>

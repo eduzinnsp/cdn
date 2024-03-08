@@ -14,10 +14,10 @@ A CDN é um serviço essencial para fornecer conteúdo estático, como imagens, 
 
 ## Pré-requisitos
 
-- Node.js (https://nodejs.org/) | Versão: >= 18
-- MongoDB (https://mongodb.com/)
-- Git Cli (https://git-scm.com/downloads)
-
+- [Node.js ](https://nodejs.org/) | Versão: >= 18
+- [MongoDB ](https://mongodb.com/)
+- [Git Cli ](https://git-scm.com/downloads)
+  
 ## Instalação e Uso
 
 1. Clone este repositório:
